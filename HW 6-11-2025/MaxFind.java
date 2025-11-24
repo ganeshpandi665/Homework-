@@ -2,21 +2,20 @@ class MaxFind
 {
 	public static void main(String [] args)
 	{
+		int ar[]={20,15};
 		MaxFind m = new MaxFind();
-		int res = m.findMax(20,15);
-		System.out.println(res);
+		int res = m.findMaximum(ar);
+		System.out.println("Maximum Value Is : "+res);
 	}
-	int findMax(int num1, int num2)
+	int findMaximum(int arr[])
 	{
-		int num3 =0;
-		if(int num3=num1>num2)
+		int max = 0;
+		for(int i=0;i<arr.length;i++)
 		{
-		   System.out.println(num1+" "+"is a largest number");	
+			if(arr[i]>max)
+			max = arr[i];
 		}
-		else if(int num3=num2>num1)
-		{
-	       System.out.println(num2+" "+"is a largest number ");
-		}
-		return num3;
+		return max;
 	}
+	
 }
